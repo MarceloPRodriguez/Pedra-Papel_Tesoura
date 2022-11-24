@@ -1,6 +1,6 @@
 import tkinter
 from tkinter import *
-from tkinter import ttk
+from tkinter import ttk 
 
 # cores --------------------------------
 co0 = "#FFFFFF"  # white / branca
@@ -30,8 +30,33 @@ estilo = ttk.Style(janela)
 estilo.theme_use('clam')
 
 # Criando labels do frame de cima
-jogador1 = Label(frame_cima, text="Voce", height=1, anchor='center', font=('Ivy 10 bold'), bg=co1, fg=co0)
-jogador1.place(x=0, y=70)
+# Jogador 1 
+jogador1_nome = Label(frame_cima, text="Voce", height=1, anchor='center', font=('Ivy 10 bold'), bg=co1, fg=co0)
+jogador1_nome.place(x=25, y=70)
+
+jogador1_vencedor = Label(frame_cima, text="", height=10, anchor='center', font=('Ivy 10 bold'), bg=co0, fg=co0)
+jogador1_vencedor.place(x=0, y=0)
+
+jogador1_pontos = Label(frame_cima, text="0", height=1, anchor='center', font=('Ivy 30 bold'), bg=co1, fg=co0)
+jogador1_pontos.place(x=50, y=20)
+
+# Separador
+separador = Label(frame_cima, text=":", height=1, anchor='center', font=('Ivy 30 bold'), bg=co1, fg=co0)
+separador.place(x=120, y=20)
+
+# Computador
+computador_pontos = Label(frame_cima, text="0", anchor='center', font=('Ivy 30 bold'), bg=co1, fg=co0)
+computador_pontos.place(x=170, y=20)
+
+computador_vencedor = Label(frame_cima, text="", height='10', anchor='center', font=('Ivy 10 bold'), bg=co0, fg=co0)
+computador_vencedor.place(x=255, y=0)
+
+computador_nome = Label(frame_cima, text="PC", height=1, anchor='center', font=('Ivy 10 bold'), bg=co1, fg=co0)
+computador_nome.place(x=205, y=70)
+
+
+linha_empate = Label(frame_cima, text="", width='255', anchor='center', font=('Ivy 1 bold'), bg=co0, fg=co0)
+linha_empate.place(x=0, y=95)
 
 
 # janela executando infinitamente
